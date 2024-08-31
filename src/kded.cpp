@@ -10,6 +10,7 @@
 #include "kded_debug.h"
 #include "kded_version.h"
 #include "kdedadaptor.h"
+#include "plasmashellmonitor.h"
 
 #include <KCrash>
 
@@ -670,7 +671,7 @@ int main(int argc, char *argv[])
     }
 
     runKonfUpdate(); // Run it once.
-
+    PlasmashellMonitor monitor;
     return app.exec(); // keep running
 }
 
