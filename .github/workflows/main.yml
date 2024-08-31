@@ -22,7 +22,8 @@ jobs:
     - name: Install dependencies
       run: |
         sudo dnf install -y cmake gcc-c++ extra-cmake-modules qt6-qtbase-devel qt6-qtdeclarative-devel kf5-kcoreaddons-devel kf5-ki18n-devel kf5-kconfig-devel kf5-kdbusaddons-devel kf5-knotifications-devel kf5-kservice-devel kf5-kiconthemes-devel kf5-kio-devel gettext
-  
+        sudo yum install -y kf6-*-devel
+
     - name: Set up Qt6 environment
       run: |
         echo "Setting up Qt6 environment"
