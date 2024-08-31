@@ -1,4 +1,5 @@
 #ifndef PLASMASHELLMONITOR_H
+
 #define PLASMASHELLMONITOR_H
 
 #include <QObject>
