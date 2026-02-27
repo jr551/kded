@@ -1,17 +1,17 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.27)
 
-set(KF_VERSION "6.6.0") # handled by release scripts
-set(KF_DEP_VERSION "6.5.0") # handled by release scripts
+set(KF_VERSION "6.24.0") # handled by release scripts
+set(KF_DEP_VERSION "6.23.0") # handled by release scripts
 project(KDED VERSION ${KF_VERSION})
 
 include(FeatureSummary)
-find_package(ECM 6.5.0  NO_MODULE)
+find_package(ECM 6.23.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-set(REQUIRED_QT_VERSION 6.5.0)
+set(REQUIRED_QT_VERSION 6.8.0)
 
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
@@ -44,8 +44,8 @@ ecm_setup_version(
 # (given that this framework produces no library)
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.5
-    KF 5.240.0
+    QT 6.11.0
+    KF 6.23.0
 )
 
 if (KF6DocTools_FOUND)
